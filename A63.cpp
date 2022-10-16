@@ -4,7 +4,9 @@
 using namespace std;
 
 
-int getSum(int);
+
+int getSum(int, int);
+
 int main() {
 
     int N;
@@ -13,7 +15,7 @@ int main() {
     cout << "Enter your number of inputs: ";
     cin >> N;
 
-   for (int i =0; i<N; i++) {
+   for (int i = 0; i < N; i++) {
     cout << "Enter your number: ";
     cin >> num;
     result = getSum(num, i);
@@ -25,7 +27,6 @@ int main() {
 }
 
 int getSum(int value, int count) {
-
     static int sum = 0;
     static int min, max;
     if (count == 0 || (min > value))
@@ -34,8 +35,10 @@ int getSum(int value, int count) {
         max = value;
     sum += value;
     return sum;
-
+    
 
 }
+
+
 
 
