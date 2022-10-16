@@ -29,16 +29,13 @@ int main() {
 int getSum(int value, int count) {
     static int sum = 0;
     static int min, max;
+    sum += value;
     if (count == 0 || (min > value))
         min = value;
-    if (count == 0 || (max > value))
+    if (count == 0 || (max < value))
         max = value;
-    sum += value;
-    return sum;
+    return sum - max - min;
     
 
 }
-
-
-
 
